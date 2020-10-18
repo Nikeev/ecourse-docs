@@ -42,7 +42,7 @@ Templates have own folders structured by app features.
 Main menu
 ---------
 
-App main menu is based in ``/templates/base.html.twig``
+App main menu is based in ``/templates/base.html.twig``.
 
 Logs
 ----
