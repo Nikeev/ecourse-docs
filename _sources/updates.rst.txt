@@ -1,3 +1,5 @@
+.. index:: Update
+
 App updates
 ===========
 

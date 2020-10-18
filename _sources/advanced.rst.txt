@@ -1,5 +1,9 @@
+.. index:: Advanced configuration
+
 Advanced configuration
 ======================
+
+.. index:: Clear cache
 
 Clear cache
 -----------
@@ -13,6 +17,7 @@ If you have any problems with cache clear or don't have an access to /update pag
     > php bin/console cache:clear
     > php bin/console cache:warmup
 
+.. index:: Mail transport
 
 Mail transport
 --------------
@@ -27,10 +32,14 @@ Open ``.env.local`` in site root and add new env variable:
 
     MAILER_DSN=smtp://user:pass@smtp.example.com:port
 
+.. index:: Text strings
+
 Change text strings
 -------------------
 
 You could alter default text strings in ``/translations/messages.en.yaml``
+
+.. index:: Templates
 
 Templates
 ---------
@@ -39,10 +48,14 @@ App templates are written in Twig and can be accessed in ``/templates/`` folder.
 
 Templates have own folders structured by app features.
 
+.. index:: Main menu
+
 Main menu
 ---------
 
 App main menu is based in ``/templates/base.html.twig``.
+
+.. index:: Logs
 
 Logs
 ----

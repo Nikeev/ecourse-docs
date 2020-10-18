@@ -1,9 +1,15 @@
+.. index:: Admin panel
+
 Admin panel
 ===========
 
 
+.. index:: Settings page
+
 Settings page
 -------------
+
+.. index:: Global settings
 
 Global settings
 ^^^^^^^^^^^^^^^
@@ -17,6 +23,8 @@ Global settings allows you to set:
 
 .. image:: /images/settings_global.png
 
+.. index:: Stripe integration
+
 Stripe integration
 ^^^^^^^^^^^^^^^^^^
 
@@ -29,6 +37,8 @@ Go to your Stripe Dashboard and get and fill Stripe Publishable key (**Stripe pk
 Also to get payments automatically applied to user you have to add Webhook to Stripe Webhooks Endpoints and fill Signing secret.
 
 .. image:: /images/settings_stripe.png
+
+.. index:: Courses
 
 Courses
 -------
@@ -52,6 +62,8 @@ Add/Edit page
 * **Published** - Course published or not.
 
 .. image:: /images/courses_edit.png
+
+.. index:: Lessons
 
 Lessons
 -------
@@ -81,6 +93,8 @@ Add/Edit page
 
 .. image:: /images/lessons_edit.png
 
+.. index:: Orders
+
 Orders
 ------
 
@@ -94,6 +108,8 @@ Manual - you could sell or give a course for a specific user manually. To do man
 
 .. image:: /images/orders_list.png
 
+.. index:: Manual checkout
+
 Manual checkout
 ^^^^^^^^^^^^^^^
 
@@ -104,6 +120,8 @@ Fill **Course**, **User** and **Amount** to create Manual order.
 When it saved, selected user could have full access to that course.
 
 .. image:: /images/orders_manual.png
+
+.. index:: Pages
 
 Pages
 -----
@@ -130,6 +148,8 @@ Add/Edit page
 * **Published** - Page published or not.
 
 .. image:: /images/pages_edit.png
+
+.. index:: Users
 
 Users
 -----
