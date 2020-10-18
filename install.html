@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installation &#8212; ECourse v1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Admin panel" href="admin.html" />
+    <link rel="prev" title="Requirements" href="requirements.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="admin.html" title="Admin panel"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="requirements.html" title="Requirements"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ECourse v1.0.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Installation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>There are two ways to install app.</p>
+<ul class="simple">
+<li><p>Extracting pre-build archive in your hosting directory</p></li>
+<li><p>Using SSH and Composer</p></li>
+</ul>
+<div class="section" id="step-1a-pre-build-archive">
+<h2>Step 1a: Pre-build archive<a class="headerlink" href="#step-1a-pre-build-archive" title="Permalink to this headline">¶</a></h2>
+<p>Extract downloaded archive and find another archive called <code class="docutils literal notranslate"><span class="pre">ecourse-full-v1.0.0.zip</span></code>.
+Upload this .zip on your hosting provider project root folder.
+Make sure you are one level upper <code class="docutils literal notranslate"><span class="pre">public_html</span></code> folder. Clear <code class="docutils literal notranslate"><span class="pre">public_html</span></code> if there any files.</p>
+<p>So, you will have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">project_root</span><span class="o">/</span>
+<span class="o">--</span><span class="n">public_html</span>
+<span class="o">--</span><span class="n">ecourse</span><span class="o">-</span><span class="n">full</span><span class="o">-</span><span class="n">v1</span><span class="o">.</span><span class="mf">0.0</span><span class="o">.</span><span class="n">zip</span>
+</pre></div>
+</div>
+<p>Next, extract archive in current directory.</p>
+</div>
+<div class="section" id="step-1b-composer">
+<h2>Step 1b: Composer<a class="headerlink" href="#step-1b-composer" title="Permalink to this headline">¶</a></h2>
+<p>Extract downloaded archive and find another archive called <code class="docutils literal notranslate"><span class="pre">ecourse-composer-v1.0.0.zip</span></code>.
+Upload this .zip on your hosting provider project root folder.
+Make sure you are one level upper <code class="docutils literal notranslate"><span class="pre">public_html</span></code> folder. Clear <code class="docutils literal notranslate"><span class="pre">public_html</span></code> if there any files.</p>
+<p>So, you will have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">project_root</span><span class="o">/</span>
+<span class="o">--</span><span class="n">public_html</span>
+<span class="o">--</span><span class="n">ecourse</span><span class="o">-</span><span class="n">composer</span><span class="o">-</span><span class="n">v1</span><span class="o">.</span><span class="mf">0.0</span><span class="o">.</span><span class="n">zip</span>
+</pre></div>
+</div>
+<p>Open ssh and run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">composer</span> <span class="n">install</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-2-app-installer">
+<h2>Step 2: App installer<a class="headerlink" href="#step-2-app-installer" title="Permalink to this headline">¶</a></h2>
+<p>Navigate to <code class="docutils literal notranslate"><span class="pre">yoursite.com/install</span></code>, fill database settings and create app admin user.</p>
+<img alt="_images/install_db.png" src="_images/install_db.png" />
+<div class="section" id="note">
+<h3>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
+<p>If you have issues with installer database configuration, you can add DB configuration manually.</p>
+<p>Create in project root file called <code class="docutils literal notranslate"><span class="pre">.env.local</span></code> and paste db config:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7
+</pre></div>
+</div>
+<p>Replace db_user, db_password, 127.0.0.1, 3306, db_name with your MySQL credentials.</p>
+<p>And run migrations to create DB structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">php</span> <span class="nb">bin</span><span class="o">/</span><span class="n">console</span> <span class="n">doctrine</span><span class="p">:</span><span class="n">migrations</span><span class="p">:</span><span class="n">migrate</span> <span class="o">-</span><span class="n">n</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Installation</a><ul>
+<li><a class="reference internal" href="#step-1a-pre-build-archive">Step 1a: Pre-build archive</a></li>
+<li><a class="reference internal" href="#step-1b-composer">Step 1b: Composer</a></li>
+<li><a class="reference internal" href="#step-2-app-installer">Step 2: App installer</a><ul>
+<li><a class="reference internal" href="#note">Note</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="requirements.html"
+                        title="previous chapter">Requirements</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="admin.html"
+                        title="next chapter">Admin panel</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/install.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="admin.html" title="Admin panel"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="requirements.html" title="Requirements"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ECourse v1.0.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Installation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Nikeev.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

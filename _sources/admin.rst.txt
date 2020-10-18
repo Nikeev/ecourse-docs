@@ -1,0 +1,149 @@
+Admin panel
+===========
+
+
+Settings page
+-------------
+
+Global settings
+^^^^^^^^^^^^^^^
+
+Global settings allows you to set:
+
+* **Site name** - Site name, displayed in top menu and page title
+* **Site icon** - It could be an icon or image url. Field can contain HTML. Displayed near site name on top bar.
+* **Site mail** - Site mail is used for outgoing emails, such as Password reset link. More details about email transport configuration see in :doc:`/advanced` section.
+* **Site footer** - You can place HTML footer text.
+
+.. image:: /images/settings_global.png
+
+Stripe integration
+^^^^^^^^^^^^^^^^^^
+
+ECourse App has Stripe integration to accept payments.
+
+Enable Stripe to get Payment button on Course and Lessons pages.
+
+Go to your Stripe Dashboard and get and fill Stripe Publishable key (**Stripe pk**) and Secret key (**Stripe sk**)
+
+Also to get payments automatically applied to user you have to add Webhook to Stripe Webhooks Endpoints and fill Signing secret.
+
+.. image:: /images/settings_stripe.png
+
+Courses
+-------
+
+List
+^^^^
+
+Courses overview page shows the list of all your courses. Use actions button to Add/Edit Course.
+
+.. image:: /images/courses_list.png
+
+Add/Edit page
+^^^^^^^^^^^^^
+
+* **Title** - the Course title.
+* **Slug** - course url slug, looks like: mysite.com/courses/``my-course-name``
+* **Short description** displayed on courses list page.
+* **Description** - full Course description. Displayed on course overview page.
+* **Image** - image for Course list and overview pages.
+* **Price** - Price for Course. If you wish to make full Course free - set price to 0.
+* **Published** - Course published or not.
+
+.. image:: /images/courses_edit.png
+
+Lessons
+-------
+
+List
+^^^^
+
+Lessons overview page shows the list of all your lessons. Use actions button to Add/Edit Lesson.
+
+Also you can change Lesson **Free**, **Coming Soon** and **Published** statuses directly without Lesson edit page.
+
+.. image:: /images/lessons_list.png
+
+Add/Edit page
+^^^^^^^^^^^^^
+
+* **Lesson number** - Number of current lesson in course. Visible in lessons list and used for lessons order.
+* **Name** - the Lesson title.
+* **Slug** - lesson url slug, looks like: mysite.com/courses/course-slug/``my-lesson-name``
+* **Course** - Course that Lesson belongs to.
+* **Duration** - If it is a video lesson or you know the time to read lesson you can set it in duration field.
+* **YouTube** or **Vimeo** video urls. Player will be inserted into top block of lesson page.
+* **Body** - lesson text content.
+* **Free lesson** - Mark lesson as Free. Even if course is paid, some lessons could be free for everyone.
+* **Coming Soon** - Coming soon lessons visible in course lessons list with "Coming soon" label, but lesson itself is not available. Useful for upcoming lessons.
+* **Published** - Lesson published or not.
+
+.. image:: /images/lessons_edit.png
+
+Orders
+------
+
+List
+^^^^
+
+Orders overview shows all courses orders. You can see Course and User order date and amount.
+At the moment there are 2 payment methods available: Stripe and Manual.
+
+Manual - you could sell or give a course for a specific user manually. To do manual checkout click **Add CourseOrder**.
+
+.. image:: /images/orders_list.png
+
+Manual checkout
+^^^^^^^^^^^^^^^
+
+Manual checkout allows you to grant access to course for specific user.
+Maybe you want to make a gift or sell course manually with other payment methods.
+
+Fill **Course**, **User** and **Amount** to create Manual order.
+When it saved, selected user could have full access to that course.
+
+.. image:: /images/orders_manual.png
+
+Pages
+-----
+
+List
+^^^^
+
+You can create and manage regular static pages. There are 3 default pages:
+
+* Welcome page, which is site front page.
+* About page, that available in site main menu. You could use it for additional info about your site and leave your contacts for customers.
+* Terms of service page.
+
+.. image:: /images/pages_list.png
+
+Add/Edit page
+^^^^^^^^^^^^^
+
+* **Title** - title of the page.
+* **Slug** - page url slug. Used as mysite.com/page/``page-slug``
+* **Page content** - HTML content of the page.
+* **Top block content** - top full width HTML block. Used as slider on front demo page.
+* **Frontpage** - check this to use page as front page.
+* **Published** - Page published or not.
+
+.. image:: /images/pages_edit.png
+
+Users
+-----
+
+List
+^^^^
+
+Here you can manage all users on your site.
+
+.. image:: /images/users_list.png
+
+Add/Edit page
+^^^^^^^^^^^^^
+
+You could add or edit existing users.
+
+.. image:: /images/users_edit.png

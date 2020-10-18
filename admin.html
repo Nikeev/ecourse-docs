@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin panel &#8212; ECourse v1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="App updates" href="updates.html" />
+    <link rel="prev" title="Installation" href="install.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="updates.html" title="App updates"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ECourse v1.0.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Admin panel</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="admin-panel">
+<h1>Admin panel<a class="headerlink" href="#admin-panel" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="settings-page">
+<h2>Settings page<a class="headerlink" href="#settings-page" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="global-settings">
+<h3>Global settings<a class="headerlink" href="#global-settings" title="Permalink to this headline">¶</a></h3>
+<p>Global settings allows you to set:</p>
+<ul class="simple">
+<li><p><strong>Site name</strong> - Site name, displayed in top menu and page title</p></li>
+<li><p><strong>Site icon</strong> - It could be an icon or image url. Field can contain HTML. Displayed near site name on top bar.</p></li>
+<li><p><strong>Site mail</strong> - Site mail is used for outgoing emails, such as Password reset link. More details about email transport configuration see in <a class="reference internal" href="advanced.html"><span class="doc">Advanced configuration</span></a> section.</p></li>
+<li><p><strong>Site footer</strong> - You can place HTML footer text.</p></li>
+</ul>
+<img alt="_images/settings_global.png" src="_images/settings_global.png" />
+</div>
+<div class="section" id="stripe-integration">
+<h3>Stripe integration<a class="headerlink" href="#stripe-integration" title="Permalink to this headline">¶</a></h3>
+<p>ECourse App has Stripe integration to accept payments.</p>
+<p>Enable Stripe to get Payment button on Course and Lessons pages.</p>
+<p>Go to your Stripe Dashboard and get and fill Stripe Publishable key (<strong>Stripe pk</strong>) and Secret key (<strong>Stripe sk</strong>)</p>
+<p>Also to get payments automatically applied to user you have to add Webhook to Stripe Webhooks Endpoints and fill Signing secret.</p>
+<img alt="_images/settings_stripe.png" src="_images/settings_stripe.png" />
+</div>
+</div>
+<div class="section" id="courses">
+<h2>Courses<a class="headerlink" href="#courses" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="list">
+<h3>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h3>
+<p>Courses overview page shows the list of all your courses. Use actions button to Add/Edit Course.</p>
+<img alt="_images/courses_list.png" src="_images/courses_list.png" />
+</div>
+<div class="section" id="add-edit-page">
+<h3>Add/Edit page<a class="headerlink" href="#add-edit-page" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Title</strong> - the Course title.</p></li>
+<li><p><strong>Slug</strong> - course url slug, looks like: mysite.com/courses/<code class="docutils literal notranslate"><span class="pre">my-course-name</span></code></p></li>
+<li><p><strong>Short description</strong> displayed on courses list page.</p></li>
+<li><p><strong>Description</strong> - full Course description. Displayed on course overview page.</p></li>
+<li><p><strong>Image</strong> - image for Course list and overview pages.</p></li>
+<li><p><strong>Price</strong> - Price for Course. If you wish to make full Course free - set price to 0.</p></li>
+<li><p><strong>Published</strong> - Course published or not.</p></li>
+</ul>
+<img alt="_images/courses_edit.png" src="_images/courses_edit.png" />
+</div>
+</div>
+<div class="section" id="lessons">
+<h2>Lessons<a class="headerlink" href="#lessons" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>List<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Lessons overview page shows the list of all your lessons. Use actions button to Add/Edit Lesson.</p>
+<p>Also you can change Lesson <strong>Free</strong>, <strong>Coming Soon</strong> and <strong>Published</strong> statuses directly without Lesson edit page.</p>
+<img alt="_images/lessons_list.png" src="_images/lessons_list.png" />
+</div>
+<div class="section" id="id2">
+<h3>Add/Edit page<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Lesson number</strong> - Number of current lesson in course. Visible in lessons list and used for lessons order.</p></li>
+<li><p><strong>Name</strong> - the Lesson title.</p></li>
+<li><p><strong>Slug</strong> - lesson url slug, looks like: mysite.com/courses/course-slug/<code class="docutils literal notranslate"><span class="pre">my-lesson-name</span></code></p></li>
+<li><p><strong>Course</strong> - Course that Lesson belongs to.</p></li>
+<li><p><strong>Duration</strong> - If it is a video lesson or you know the time to read lesson you can set it in duration field.</p></li>
+<li><p><strong>YouTube</strong> or <strong>Vimeo</strong> video urls. Player will be inserted into top block of lesson page.</p></li>
+<li><p><strong>Body</strong> - lesson text content.</p></li>
+<li><p><strong>Free lesson</strong> - Mark lesson as Free. Even if course is paid, some lessons could be free for everyone.</p></li>
+<li><p><strong>Coming Soon</strong> - Coming soon lessons visible in course lessons list with “Coming soon” label, but lesson itself is not available. Useful for upcoming lessons.</p></li>
+<li><p><strong>Published</strong> - Lesson published or not.</p></li>
+</ul>
+<img alt="_images/lessons_edit.png" src="_images/lessons_edit.png" />
+</div>
+</div>
+<div class="section" id="orders">
+<h2>Orders<a class="headerlink" href="#orders" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>List<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Orders overview shows all courses orders. You can see Course and User order date and amount.
+At the moment there are 2 payment methods available: Stripe and Manual.</p>
+<p>Manual - you could sell or give a course for a specific user manually. To do manual checkout click <strong>Add CourseOrder</strong>.</p>
+<img alt="_images/orders_list.png" src="_images/orders_list.png" />
+</div>
+<div class="section" id="manual-checkout">
+<h3>Manual checkout<a class="headerlink" href="#manual-checkout" title="Permalink to this headline">¶</a></h3>
+<p>Manual checkout allows you to grant access to course for specific user.
+Maybe you want to make a gift or sell course manually with other payment methods.</p>
+<p>Fill <strong>Course</strong>, <strong>User</strong> and <strong>Amount</strong> to create Manual order.
+When it saved, selected user could have full access to that course.</p>
+<img alt="_images/orders_manual.png" src="_images/orders_manual.png" />
+</div>
+</div>
+<div class="section" id="pages">
+<h2>Pages<a class="headerlink" href="#pages" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>List<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>You can create and manage regular static pages. There are 3 default pages:</p>
+<ul class="simple">
+<li><p>Welcome page, which is site front page.</p></li>
+<li><p>About page, that available in site main menu. You could use it for additional info about your site and leave your contacts for customers.</p></li>
+<li><p>Terms of service page.</p></li>
+</ul>
+<img alt="_images/pages_list.png" src="_images/pages_list.png" />
+</div>
+<div class="section" id="id5">
+<h3>Add/Edit page<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Title</strong> - title of the page.</p></li>
+<li><p><strong>Slug</strong> - page url slug. Used as mysite.com/page/<code class="docutils literal notranslate"><span class="pre">page-slug</span></code></p></li>
+<li><p><strong>Page content</strong> - HTML content of the page.</p></li>
+<li><p><strong>Top block content</strong> - top full width HTML block. Used as slider on front demo page.</p></li>
+<li><p><strong>Frontpage</strong> - check this to use page as front page.</p></li>
+<li><p><strong>Published</strong> - Page published or not.</p></li>
+</ul>
+<img alt="_images/pages_edit.png" src="_images/pages_edit.png" />
+</div>
+</div>
+<div class="section" id="users">
+<h2>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>List<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Here you can manage all users on your site.</p>
+<img alt="_images/users_list.png" src="_images/users_list.png" />
+</div>
+<div class="section" id="id7">
+<h3>Add/Edit page<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>You could add or edit existing users.</p>
+<img alt="_images/users_edit.png" src="_images/users_edit.png" />
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Admin panel</a><ul>
+<li><a class="reference internal" href="#settings-page">Settings page</a><ul>
+<li><a class="reference internal" href="#global-settings">Global settings</a></li>
+<li><a class="reference internal" href="#stripe-integration">Stripe integration</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#courses">Courses</a><ul>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#add-edit-page">Add/Edit page</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lessons">Lessons</a><ul>
+<li><a class="reference internal" href="#id1">List</a></li>
+<li><a class="reference internal" href="#id2">Add/Edit page</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#orders">Orders</a><ul>
+<li><a class="reference internal" href="#id3">List</a></li>
+<li><a class="reference internal" href="#manual-checkout">Manual checkout</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pages">Pages</a><ul>
+<li><a class="reference internal" href="#id4">List</a></li>
+<li><a class="reference internal" href="#id5">Add/Edit page</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#users">Users</a><ul>
+<li><a class="reference internal" href="#id6">List</a></li>
+<li><a class="reference internal" href="#id7">Add/Edit page</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="install.html"
+                        title="previous chapter">Installation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="updates.html"
+                        title="next chapter">App updates</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/admin.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="updates.html" title="App updates"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ECourse v1.0.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Admin panel</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Nikeev.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

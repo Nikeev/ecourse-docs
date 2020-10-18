@@ -1,0 +1,41 @@
+App updates
+===========
+
+If there is a new version of app and you consider to update, please follow this instructions:
+
+# Make a full site files and database backup.
+
+# Download new app version.
+
+# Replace existing files with files from new version archive.
+Be careful if you made custom modifications to code.
+
+# (Optional) Run ``composer install`` if you use composer version instead of full pre-build package.
+
+# Go to ``yoursite.com/update``. Script will run database migrations if any and clear all caches.
+You will see logs about results.
+
+Manually run migrations
+-----------------------
+
+You could also run migrations via ssh:
+
+::
+
+    > php bin/console doctrine:migrations:migrate -n
+    # And clear cache
+    > php bin/console cache:clear
+    > php bin/console cache:warmup
+
+Free access /update page
+------------------------
+
+Update page requires you to be logged in as Administrator. But in some cases you can not be logged in.
+
+To access Update page as anonymous user open ``.env.local`` file in site root and add following line:
+
+::
+
+    UPDATE_FREE_ACCESS=true
+
+Remove this line or set ``UPDATE_FREE_ACCESS`` to ``false`` after all done.

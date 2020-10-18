@@ -1,0 +1,52 @@
+Advanced configuration
+======================
+
+Clear cache
+-----------
+
+You could clear site caches by visiting ``yoursite.com/update``
+
+If you have any problems with cache clear or don't have an access to /update page you could do it via ssh:
+
+::
+
+    > php bin/console cache:clear
+    > php bin/console cache:warmup
+
+
+Mail transport
+--------------
+
+By default outgoing emails are sent via sendmail.
+
+But you can change it's behavior and use any SMTP server.
+
+Open ``.env.local`` in site root and add new env variable:
+
+::
+
+    MAILER_DSN=smtp://user:pass@smtp.example.com:port
+
+Change text strings
+-------------------
+
+You could alter default text strings in ``/translations/messages.en.yaml``
+
+Templates
+---------
+
+App templates are written in Twig and can be accessed in ``/templates/`` folder.
+
+Templates have own folders structured by app features.
+
+Main menu
+---------
+
+App main menu is based in ``/templates/base.html.twig``
+
+Logs
+----
+
+If you have any troubles and errors logs can help you to find an issue.
+
+Logs are places in ``var/log/prod.log`` (or dev.log for development environment)

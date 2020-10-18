@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App updates &#8212; ECourse v1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Advanced configuration" href="advanced.html" />
+    <link rel="prev" title="Admin panel" href="admin.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="advanced.html" title="Advanced configuration"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="admin.html" title="Admin panel"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ECourse v1.0.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">App updates</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="app-updates">
+<h1>App updates<a class="headerlink" href="#app-updates" title="Permalink to this headline">¶</a></h1>
+<p>If there is a new version of app and you consider to update, please follow this instructions:</p>
+<p># Make a full site files and database backup.</p>
+<p># Download new app version.</p>
+<p># Replace existing files with files from new version archive.
+Be careful if you made custom modifications to code.</p>
+<p># (Optional) Run <code class="docutils literal notranslate"><span class="pre">composer</span> <span class="pre">install</span></code> if you use composer version instead of full pre-build package.</p>
+<p># Go to <code class="docutils literal notranslate"><span class="pre">yoursite.com/update</span></code>. Script will run database migrations if any and clear all caches.
+You will see logs about results.</p>
+<div class="section" id="manually-run-migrations">
+<h2>Manually run migrations<a class="headerlink" href="#manually-run-migrations" title="Permalink to this headline">¶</a></h2>
+<p>You could also run migrations via ssh:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">php</span> <span class="nb">bin</span><span class="o">/</span><span class="n">console</span> <span class="n">doctrine</span><span class="p">:</span><span class="n">migrations</span><span class="p">:</span><span class="n">migrate</span> <span class="o">-</span><span class="n">n</span>
+<span class="c1"># And clear cache</span>
+<span class="o">&gt;</span> <span class="n">php</span> <span class="nb">bin</span><span class="o">/</span><span class="n">console</span> <span class="n">cache</span><span class="p">:</span><span class="n">clear</span>
+<span class="o">&gt;</span> <span class="n">php</span> <span class="nb">bin</span><span class="o">/</span><span class="n">console</span> <span class="n">cache</span><span class="p">:</span><span class="n">warmup</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="free-access-update-page">
+<h2>Free access /update page<a class="headerlink" href="#free-access-update-page" title="Permalink to this headline">¶</a></h2>
+<p>Update page requires you to be logged in as Administrator. But in some cases you can not be logged in.</p>
+<p>To access Update page as anonymous user open <code class="docutils literal notranslate"><span class="pre">.env.local</span></code> file in site root and add following line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">UPDATE_FREE_ACCESS</span><span class="o">=</span><span class="n">true</span>
+</pre></div>
+</div>
+<p>Remove this line or set <code class="docutils literal notranslate"><span class="pre">UPDATE_FREE_ACCESS</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code> after all done.</p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">App updates</a><ul>
+<li><a class="reference internal" href="#manually-run-migrations">Manually run migrations</a></li>
+<li><a class="reference internal" href="#free-access-update-page">Free access /update page</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="admin.html"
+                        title="previous chapter">Admin panel</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="advanced.html"
+                        title="next chapter">Advanced configuration</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/updates.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="advanced.html" title="Advanced configuration"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="admin.html" title="Admin panel"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ECourse v1.0.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">App updates</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Nikeev.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

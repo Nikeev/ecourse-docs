@@ -1,0 +1,25 @@
+.. ECourse documentation master file, created by
+   sphinx-quickstart on Sat Oct 17 23:31:55 2020.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to ECourse's documentation!
+===================================
+
+Guide
+^^^^^
+
+.. toctree::
+   :maxdepth: 2
+
+   requirements
+   install
+   admin
+   updates
+   advanced
+
+
+About
+=====
+
+ECourse is a Symfony PHP app that helps you to build and sell your own online courses.

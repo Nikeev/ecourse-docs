@@ -1,0 +1,8 @@
+Requirements
+============
+
+In order to run ECourse App your hosting provider needs to support:
+
+* PHP 7.3, 7.4
+* MySQL 5.7
+* Composer (optional)
