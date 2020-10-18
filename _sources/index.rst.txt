@@ -1,5 +1,5 @@
-ECourse App documentation
-=========================
+ECourse - Online school App documentation
+=========================================
 
 Guide
 ^^^^^

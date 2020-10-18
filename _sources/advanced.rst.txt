@@ -17,6 +17,8 @@ If you have any problems with cache clear or don't have an access to /update pag
     > php bin/console cache:clear
     > php bin/console cache:warmup
 
+Other method to clear cache if /update and ssh are unavailable, in your hosting file manager, open ``/var/cache`` folder and clear it's content.
+
 .. index:: Mail transport
 
 Mail transport
