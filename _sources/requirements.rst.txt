@@ -8,3 +8,15 @@ In order to run ECourse App your hosting provider needs to support:
 * PHP 7.3, 7.4
 * MySQL 5.7
 * Composer (optional)
+* Writable directories: (must be writable by the web server)
+   * The project’s cache directory (var/cache/ by default)
+   * The project’s log directory (var/log/ by default)
+   * Public (public_html) directory for images and files uploads.
+* PHP extensions: (all of them are installed and enabled by default in PHP 7+)
+   * Ctype
+   * iconv
+   * JSON
+   * PCRE
+   * Session
+   * SimpleXML
+   * Tokenizer

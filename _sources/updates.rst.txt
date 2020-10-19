@@ -5,17 +5,15 @@ App updates
 
 If there is a new version of app and you consider to update, please follow this instructions:
 
-# Make a full site files and database backup.
+#. Make a full site files and database backup.
 
-# Download new app version.
+#. Download new app version.
 
-# Replace existing files with files from new version archive.
-Be careful if you made custom modifications to code.
+#. Replace existing files with files from new version archive. Be careful if you made custom modifications to code and images in **public_html** folder.
 
-# (Optional) Run ``composer install`` if you use composer version instead of full pre-build package.
+#. (Optional) Run ``composer install`` if you use composer version instead of full pre-build package.
 
-# Go to ``yoursite.com/update``. Script will run database migrations if any and clear all caches.
-You will see logs about results.
+#. Go to ``yoursite.com/update``. Script will run database migrations if any and clear all caches. You will see logs about results.
 
 Manually run migrations
 -----------------------

@@ -43,13 +43,13 @@
   <div class="section" id="app-updates">
 <span id="index-0"></span><h1>App updates<a class="headerlink" href="#app-updates" title="Permalink to this headline">¶</a></h1>
 <p>If there is a new version of app and you consider to update, please follow this instructions:</p>
-<p># Make a full site files and database backup.</p>
-<p># Download new app version.</p>
-<p># Replace existing files with files from new version archive.
-Be careful if you made custom modifications to code.</p>
-<p># (Optional) Run <code class="docutils literal notranslate"><span class="pre">composer</span> <span class="pre">install</span></code> if you use composer version instead of full pre-build package.</p>
-<p># Go to <code class="docutils literal notranslate"><span class="pre">yoursite.com/update</span></code>. Script will run database migrations if any and clear all caches.
-You will see logs about results.</p>
+<ol class="arabic simple">
+<li><p>Make a full site files and database backup.</p></li>
+<li><p>Download new app version.</p></li>
+<li><p>Replace existing files with files from new version archive. Be careful if you made custom modifications to code and images in <strong>public_html</strong> folder.</p></li>
+<li><p>(Optional) Run <code class="docutils literal notranslate"><span class="pre">composer</span> <span class="pre">install</span></code> if you use composer version instead of full pre-build package.</p></li>
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">yoursite.com/update</span></code>. Script will run database migrations if any and clear all caches. You will see logs about results.</p></li>
+</ol>
 <div class="section" id="manually-run-migrations">
 <h2>Manually run migrations<a class="headerlink" href="#manually-run-migrations" title="Permalink to this headline">¶</a></h2>
 <p>You could also run migrations via ssh:</p>

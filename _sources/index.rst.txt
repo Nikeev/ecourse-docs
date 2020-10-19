@@ -12,6 +12,7 @@ Guide
    admin
    updates
    advanced
+   troubleshooting
 
 
 About

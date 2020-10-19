@@ -1,0 +1,36 @@
+.. index:: Troubleshooting
+
+Troubleshooting
+===============
+
+.. index:: White screen
+
+White screen on install
+-----------------------
+
+There are some possible reasons of white screen:
+
+* Try to reupload and unzip again source code. File could be corrupted during upload.
+* Ensure that web server is looking **index.php** in **public_html** folder.
+* Check PHP version. App was tested and built on PHP 7.3 and 7.4
+
+Something is broken
+-------------------
+
+Some tips:
+
+* Try to clear cache on ``/update`` page. If you can't access it, use ssh to clear cache from console:
+
+::
+
+    > php bin/console cache:clear
+    > php bin/console cache:warmup
+
+* Check logs in ``/var/log/prod.log`` to find an issue.
+
+.. index:: public_html
+
+My hosting uses not public_html
+-------------------------------
+
+The easiest way to use non **public_html** folder is to creat a symbolic link from your folder to **public_html**.

@@ -15,6 +15,7 @@
     <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Troubleshooting" href="troubleshooting.html" />
     <link rel="prev" title="App updates" href="updates.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -23,6 +24,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="troubleshooting.html" title="Troubleshooting"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="updates.html" title="App updates"
              accesskey="P">previous</a> |</li>
@@ -74,6 +78,22 @@
 <span id="index-6"></span><h2>Logs<a class="headerlink" href="#logs" title="Permalink to this headline">¶</a></h2>
 <p>If you have any troubles and errors logs can help you to find an issue.</p>
 <p>Logs are places in <code class="docutils literal notranslate"><span class="pre">var/log/prod.log</span></code> (or dev.log for development environment)</p>
+<span class="target" id="index-7"></span></div>
+<div class="section" id="modify-javascript-and-css-files">
+<span id="index-8"></span><h2>Modify JavaScript and CSS files<a class="headerlink" href="#modify-javascript-and-css-files" title="Permalink to this headline">¶</a></h2>
+<p>App is using Webpack and Symfony Webpack Encore library to manage and build JS and CSS assets.</p>
+<p>App scripts and styles already precompiled and served from <code class="docutils literal notranslate"><span class="pre">/public_html/build</span></code> folder.</p>
+<p>To use Webpack for custom modifications you need to have node.js and package manager support.</p>
+<p>To load all necessary node modules run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">yarn</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>ECourse App source JS and CSS files are located in <code class="docutils literal notranslate"><span class="pre">/assets</span></code> directory.</p>
+<p>To build new production ready assets run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">yarn</span> <span class="n">encore</span> <span class="n">production</span>
+</pre></div>
+</div>
+<p>More details about Webpack Encore: <a class="reference external" href="https://symfony.com/doc/current/frontend.html">https://symfony.com/doc/current/frontend.html</a></p>
 </div>
 </div>
 
@@ -93,6 +113,7 @@
 <li><a class="reference internal" href="#templates">Templates</a></li>
 <li><a class="reference internal" href="#main-menu">Main menu</a></li>
 <li><a class="reference internal" href="#logs">Logs</a></li>
+<li><a class="reference internal" href="#modify-javascript-and-css-files">Modify JavaScript and CSS files</a></li>
 </ul>
 </li>
 </ul>
@@ -100,6 +121,9 @@
   <h4>Previous topic</h4>
   <p class="topless"><a href="updates.html"
                         title="previous chapter">App updates</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="troubleshooting.html"
+                        title="next chapter">Troubleshooting</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -127,6 +151,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="troubleshooting.html" title="Troubleshooting"
+             >next</a> |</li>
         <li class="right" >
           <a href="updates.html" title="App updates"
              >previous</a> |</li>

@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Troubleshooting &#8212; ECourse v1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Advanced configuration" href="advanced.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="advanced.html" title="Advanced configuration"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ECourse v1.0.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Troubleshooting</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="troubleshooting">
+<span id="index-0"></span><h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="white-screen-on-install">
+<span id="index-1"></span><h2>White screen on install<a class="headerlink" href="#white-screen-on-install" title="Permalink to this headline">¶</a></h2>
+<p>There are some possible reasons of white screen:</p>
+<ul class="simple">
+<li><p>Try to reupload and unzip again source code. File could be corrupted during upload.</p></li>
+<li><p>Ensure that web server is looking <strong>index.php</strong> in <strong>public_html</strong> folder.</p></li>
+<li><p>Check PHP version. App was tested and built on PHP 7.3 and 7.4</p></li>
+</ul>
+</div>
+<div class="section" id="something-is-broken">
+<h2>Something is broken<a class="headerlink" href="#something-is-broken" title="Permalink to this headline">¶</a></h2>
+<p>Some tips:</p>
+<ul class="simple">
+<li><p>Try to clear cache on <code class="docutils literal notranslate"><span class="pre">/update</span></code> page. If you can’t access it, use ssh to clear cache from console:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">php</span> <span class="nb">bin</span><span class="o">/</span><span class="n">console</span> <span class="n">cache</span><span class="p">:</span><span class="n">clear</span>
+<span class="o">&gt;</span> <span class="n">php</span> <span class="nb">bin</span><span class="o">/</span><span class="n">console</span> <span class="n">cache</span><span class="p">:</span><span class="n">warmup</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Check logs in <code class="docutils literal notranslate"><span class="pre">/var/log/prod.log</span></code> to find an issue.</p></li>
+</ul>
+</div>
+<div class="section" id="my-hosting-uses-not-public-html">
+<span id="index-2"></span><h2>My hosting uses not public_html<a class="headerlink" href="#my-hosting-uses-not-public-html" title="Permalink to this headline">¶</a></h2>
+<p>The easiest way to use non <strong>public_html</strong> folder is to creat a symbolic link from your folder to <strong>public_html</strong>.</p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Troubleshooting</a><ul>
+<li><a class="reference internal" href="#white-screen-on-install">White screen on install</a></li>
+<li><a class="reference internal" href="#something-is-broken">Something is broken</a></li>
+<li><a class="reference internal" href="#my-hosting-uses-not-public-html">My hosting uses not public_html</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="advanced.html"
+                        title="previous chapter">Advanced configuration</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/troubleshooting.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="advanced.html" title="Advanced configuration"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ECourse v1.0.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Troubleshooting</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Nikeev.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

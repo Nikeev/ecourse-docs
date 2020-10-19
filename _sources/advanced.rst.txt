@@ -65,3 +65,32 @@ Logs
 If you have any troubles and errors logs can help you to find an issue.
 
 Logs are places in ``var/log/prod.log`` (or dev.log for development environment)
+
+.. index:: JavaScript
+
+.. index:: CSS
+
+Modify JavaScript and CSS files
+-------------------------------
+
+App is using Webpack and Symfony Webpack Encore library to manage and build JS and CSS assets.
+
+App scripts and styles already precompiled and served from ``/public_html/build`` folder.
+
+To use Webpack for custom modifications you need to have node.js and package manager support.
+
+To load all necessary node modules run
+
+::
+
+   > yarn install
+
+ECourse App source JS and CSS files are located in ``/assets`` directory.
+
+To build new production ready assets run
+
+::
+
+   > yarn encore production
+
+More details about Webpack Encore: https://symfony.com/doc/current/frontend.html
