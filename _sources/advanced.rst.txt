@@ -19,6 +19,16 @@ If you have any problems with cache clear or don't have an access to /update pag
 
 Other method to clear cache if /update and ssh are unavailable, in your hosting file manager, open ``/var/cache`` folder and clear it's content.
 
+.. index:: Favicon
+
+How to change favicon
+---------------------
+
+Favicon is located in web root directory ``/public_html``
+
+You could simply replace favicon files with your own.
+
+
 .. index:: Mail transport
 
 Mail transport
